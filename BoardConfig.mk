@@ -31,6 +31,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 TARGET_KERNEL_SOURCE := kernel/samsung/cooper
 TARGET_KERNEL_CONFIG := cyanogenmod_cooper_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_PREBUILT_KERNEL := device/samsung/cooper/kernel
 
 ## Platform
 TARGET_BOARD_PLATFORM := msm7x27
