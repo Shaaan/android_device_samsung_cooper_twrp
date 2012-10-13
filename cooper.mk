@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Proprietary stuff
-$(call inherit-product, vendor/samsung/cooper/cooper-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/cooper/cooper-vendor.mk)
 # GPS configuratipm
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 DEVICE_PACKAGE_OVERLAYS += device/samsung/cooper/overlay
