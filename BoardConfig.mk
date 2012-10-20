@@ -28,9 +28,6 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOOTLOADER_BOARD_NAME := cooper
 BOARD_KERNEL_BASE := 0x13600000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_SOURCE := kernel/samsung/cooper
-TARGET_KERNEL_CONFIG := cyanogenmod_cooper_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 TARGET_PREBUILT_KERNEL := device/samsung/cooper/kernel
 
 ## Platform
@@ -131,14 +128,14 @@ BOARD_KERNEL_CMDLINE :=
 BOARD_BML_BOOT := "/dev/block/bml8"
 BOARD_BML_RECOVERY := "/dev/block/bml9"
 BOARD_RECOVERY_HANDLES_MOUNT := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/cooper/recovery/recovery_kernel
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/cooper/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/samsung/cooper/recovery/recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/cooper/recovery/recovery.fstab
+BOARD_HAS_DOWNLOAD_MODE := true
 
 ## TWRP
 DEVICE_RESOLUTION := 320x480
-TW_INCLUDE_INJECTTWRP := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_FLASH_FROM_STORAGE := true
-TWRP_EVENT_LOGGING := true
+BOARD_USES_BML_OVER_MTD := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
